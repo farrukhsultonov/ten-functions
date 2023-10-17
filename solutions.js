@@ -33,52 +33,89 @@ function isFalse(input) {
 
 // 3. not
 function not(input) {
-    return !input;
+    return !input
 }
 
-// 4. addOne
+// 4.addOne
 function addOne(input) {
-    return Number(input) + 1;
+    return ++input;
 }
 
 // 5. isEven
 function isEven(input) {
-    let evenInput = parseFloat(input);
-    return (evenInput % 2 === 0);
+    let evenInput = parseFloat(input)
+    return evenInput % 2 === 0;
 }
 
-// 6. isIdentical
-function isIdentical(arg1, arg2) {
-    return arg1 === arg2;
-}
-
-// 7. isEqual
-function isEqual(arg1, arg2) {
-    return arg1 == arg2;
-}
-
-// 8. or
-function or(arg1, arg2) {
-    return arg1 || arg2;
-}
-
-// 9. and
-function and(arg1, arg2) {
-    return arg1 && arg2;
-}
-
-
-// 10. concat
-// function concat(arg1, arg2) {
-//     if (arg1 === true && arg2 === true) {
-//         return "truetrue";
-//     } else if (typeof arg1 === 'string' && typeof arg2 === 'string') {
-//         return arg1 + arg2; // Concatenate two strings
-//     } else if (typeof arg1 === 'number' && typeof arg2 === 'number') {
-//         return String(arg1) + String(arg2); // Convert numbers to strings and concatenate
+// // T-asia's solution
+// function isEven(input) {
+//     if(input % 2 === 0) {
+//         return true;
+//     }else if (input === input) {
+//         return false;
+//     } else if (input === 0) {
+//         return false;
+//     }
+// }
+//
+// // Lance's solution
+// const isEven = even => even % 2 === 0;
+//
+// // Gabriel's solution
+// function isEven(input) {
+//     if(input % 2 === 0) {
+//         return true;
+//     }else {
+//         return false;
 //     }
 // }
 
+// 6. isIdentical
+// function isIdentical(input1, input2) {
+//     return Object.is(input1, input2)
+// }
+
+function isIdentical(input1, input2) {
+    return input1 === input2
+}
+
+// 7. isEqual
+function isEqual(input1, input2) {
+    return input1 == input2
+}
+
+// 8. or
+function or(input1, input2) {
+    return input1 || input2
+}
+
+// 9. and
+function and(input1, input2) {
+    return input1 && input2
+}
+
+// 10. concat
+// function concat(arg1, arg2) {
+//     return (arg1.toString() + arg2.toString())
+// }
+
+
+// function concat(arg1, arg2) {
+//     if(typeof arg1 === "string" && typeof arg2 === "string") {
+//         return arg1 + arg2;
+//     } else if (typeof arg1 === "number" && typeof arg2 === "number") {
+//         return arg1.toString() +arg2.toString()
+//     } else {
+//         return String(arg1) + String(arg2)
+//     }
+// }
+
+
+// function concat(arg1, arg2) {
+//     return "".concat(arg1, arg2);
+// }
+
+
 function concat(arg1, arg2) {
-    return (arg1.toString() + arg2.toString())
+    return `${arg1.toString()}` + `${arg2.toString()}`
 }
