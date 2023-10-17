@@ -80,7 +80,5 @@ function and(arg1, arg2) {
 // }
 
 function concat(arg1, arg2) {
-    let stringOne = arg1.toString();
-    let stringTwo = arg2.toString();
-    return (stringOne + stringTwo)
+    return (arg1.toString() + arg2.toString())
 }
